@@ -42,5 +42,9 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types' : 'off',
         '@typescript-eslint/no-explicit-any' : 'off',
         '@typescript-eslint/require-await' : 'off',
+        '@typescript-eslint/no-unsafe-call' : 'off',
+        '@typescript-eslint/no-unsafe-return' : 'off',
+        '@typescript-eslint/no-unsafe-argument' : 'off',
+        '@typescript-eslint/no-unsafe-assignment' : 'off',
     },
 };
