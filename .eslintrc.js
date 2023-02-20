@@ -15,7 +15,7 @@ module.exports = {
         tsconfigRootDir : __dirname,
     },
     root : true,
-    ignorePatterns : ['.eslintrc.js', 'dist'],
+    ignorePatterns : ['.eslintrc.js', 'jest.config.js', 'dist'],
     rules : {
         'max-len' : ['warn', {ignoreComments : true}],
         'eol-last' : ['warn', 'always'],
@@ -41,5 +41,6 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type' : 'off',
         '@typescript-eslint/explicit-module-boundary-types' : 'off',
         '@typescript-eslint/no-explicit-any' : 'off',
+        '@typescript-eslint/require-await' : 'off',
     },
 };
