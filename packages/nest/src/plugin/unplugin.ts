@@ -1,7 +1,8 @@
 
 
+import {relative, isAbsolute} from 'path';
 import {createUnplugin} from 'unplugin';
-import {register} from '@swc-node/register/register';
+import {register} from 'ts-node';
 import {listdir, makeEntry, makeOutput} from './path';
 import {transform} from './transform';
 
@@ -20,6 +21,11 @@ export const NestApiPlugin =
         return {
             name : '@zeroapi/nest',
             enforce : 'pre',
+
+            transformInclude(id) {
+                const path = relative(apiRoot, id);
+                return !!path && !path.startsWith('..') && !isAbsolute(path);
+            },
 
             transform(code, id) {
                 return transform(id);
