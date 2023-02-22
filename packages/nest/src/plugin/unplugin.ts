@@ -2,7 +2,6 @@
 
 import {createUnplugin} from 'unplugin';
 import {register} from '@swc-node/register/register';
-import pkg from '../../package.json';
 import {listdir, makeEntry, makeOutput} from './path';
 import {transform} from './transform';
 
@@ -19,7 +18,7 @@ export const NestApiPlugin =
         const {apiRoot = 'src/api', outDir = 'api'} = option || {};
 
         return {
-            name : pkg.name,
+            name : '@zeroapi/nest',
             enforce : 'pre',
 
             transform(code, id) {
