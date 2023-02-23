@@ -1,0 +1,38 @@
+{
+    "name": "@reduite/zeroapi-nest",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
+    "keywords": [],
+    "author": "ClouderSky",
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+        "test": "jest"
+    },
+    "jest": {
+        "preset": "ts-jest"
+    },
+    "dependencies": {
+        "@anatine/zod-nestjs": "^1.9.2",
+        "@nestjs/common": "^9.0.0",
+        "@nestjs/core": "^9.0.0",
+        "@reduite/zeroapi-rpc": "workspace:^1.0.0",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^7.2.0",
+        "unplugin": "^1.1.0",
+        "zod": "^3.20.2"
+    },
+    "devDependencies": {
+        "@nestjs/platform-fastify": "^9.3.9",
+        "@nestjs/testing": "^9.3.3",
+        "fastify": "^4.13.0",
+        "rimraf": "^4.1.2",
+        "ts-node": "^10.0.0"
+    }
+}
