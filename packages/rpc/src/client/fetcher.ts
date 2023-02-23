@@ -8,5 +8,6 @@ export const fetcher : Fetcher = (req, opiton) => {
         method : 'POST',
         body : req.data ? JSON.stringify(req.data) : undefined,
         credentials : opiton.withCredentials ? 'include' : 'omit',
+        headers : {'Content-Type' : 'application/json'},
     }).then((x) => x.json());
 };
