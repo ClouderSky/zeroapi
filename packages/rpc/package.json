@@ -1,5 +1,5 @@
 {
-    "name": "@zeroapi/rpc",
+    "name": "@reduite/zeroapi-rpc",
     "version": "1.0.0",
     "description": "",
     "main": "dist/index.js",
@@ -7,6 +7,9 @@
     "keywords": [],
     "author": "ClouderSky",
     "license": "MIT",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rimraf dist && tsc",
         "lint": "eslint \"{src,test}/**/*.ts\" --fix",

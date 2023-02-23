@@ -27,6 +27,8 @@ export const transform = (id : string) => {
     const apiList = Object.entries(mod)
         .map(([name, value]) => toClientFunction(name, value))
         .filter((x) : x is string => !!x);
-    return apiList.length === 0 ?
-        '' : ['import {request} from "@zeroapi/rpc";', ...apiList].join('\n');
+    return apiList.length === 0 ? '' : [
+        'import {request} from "@reduite/zeroapi-rpc";',
+        ...apiList,
+    ].join('\n');
 };

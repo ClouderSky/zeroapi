@@ -24,14 +24,14 @@
         "@nestjs/common": "^9.0.0",
         "@nestjs/core": "^9.0.0",
         "@nestjs/platform-express": "^9.0.0",
-        "@zeroapi/nest": "workspace:^1.0.0",
-        "@zeroapi/rpc": "workspace:^1.0.0",
+        "@reduite/zeroapi-nest": "workspace:^1.0.0",
+        "@reduite/zeroapi-rpc": "workspace:^1.0.0",
         "fp-ts": "^2.13.1",
         "reflect-metadata": "^0.1.13",
         "rxjs": "^7.2.0"
     },
     "dependenciesMeta": {
-        "@zeroapi/nest": {
+        "@reduite/zeroapi-nest": {
             "injected": true
         }
     },

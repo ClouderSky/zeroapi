@@ -19,7 +19,7 @@ export const NestApiPlugin =
         const {apiRoot = 'src/api', outDir = 'api'} = option || {};
 
         return {
-            name : '@zeroapi/nest',
+            name : '@reduite/zeroapi-nest',
             enforce : 'pre',
 
             transformInclude(id) {

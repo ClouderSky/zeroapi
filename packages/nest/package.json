@@ -1,5 +1,5 @@
 {
-    "name": "@zeroapi/nest",
+    "name": "@reduite/zeroapi-nest",
     "version": "1.0.0",
     "description": "",
     "main": "dist/index.js",
@@ -7,6 +7,9 @@
     "keywords": [],
     "author": "ClouderSky",
     "license": "MIT",
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rimraf dist && tsc",
         "lint": "eslint \"{src,test}/**/*.ts\" --fix",
@@ -19,7 +22,7 @@
         "@anatine/zod-nestjs": "^1.9.2",
         "@nestjs/common": "^9.0.0",
         "@nestjs/core": "^9.0.0",
-        "@zeroapi/rpc": "workspace:^1.0.0",
+        "@reduite/zeroapi-rpc": "workspace:^1.0.0",
         "reflect-metadata": "^0.1.13",
         "rxjs": "^7.2.0",
         "unplugin": "^1.1.0",

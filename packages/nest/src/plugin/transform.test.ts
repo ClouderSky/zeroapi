@@ -15,7 +15,7 @@ export default hello;
 
 
 const compiled = [
-    'import {request} from "@zeroapi/rpc";',
+    'import {request} from "@reduite/zeroapi-rpc";',
     'export const hello = (...args) => request({url : \'/test/hello\', args});',
     'export default (...args) => request({url : \'/test/hello\', args});',
 ].join('\n');

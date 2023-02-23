@@ -1,6 +1,6 @@
 import * as E from 'fp-ts/Either';
-import type {RequestContext} from '@zeroapi/nest';
-import {createController, createModule} from '@zeroapi/nest';
+import type {RequestContext} from '@reduite/zeroapi-nest';
+import {createController, createModule} from '@reduite/zeroapi-nest';
 import {AppService} from '../service/app';
 
 

@@ -1,12 +1,12 @@
 import {defineConfig} from 'vite';
-import {NestApiPlugin} from '@zeroapi/nest';
+import {NestApiPlugin} from '@reduite/zeroapi-nest';
 import dts from 'vite-plugin-dts';
 import {externalizeDeps} from 'vite-plugin-externalize-deps';
 
 export default defineConfig({
     build : {
         rollupOptions : {
-            external : ['@zeroapi/rpc'],
+            external : ['@reduite/zeroapi-rpc'],
         },
     },
     plugins : [

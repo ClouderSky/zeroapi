@@ -29,7 +29,7 @@ importers:
       '@types/node': ^16.18.12
       '@types/react': ^18.0.28
       '@types/react-dom': ^18.0.11
-      '@zeroapi/rpc': workspace:^1.0.0
+      '@reduite/zeroapi-rpc': workspace:^1.0.0
       basic-server: workspace:^0.0.1
       fp-ts: ^2.13.1
       react: ^18.2.0
@@ -45,7 +45,7 @@ importers:
       '@types/node': 16.18.12
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@zeroapi/rpc': link:../../packages/rpc
+      '@reduite/zeroapi-rpc': link:../../packages/rpc
       basic-server: link:../basic-server
       fp-ts: 2.13.1
       react: 18.2.0
@@ -68,8 +68,8 @@ importers:
       '@types/supertest': ^2.0.11
       '@typescript-eslint/eslint-plugin': ^5.0.0
       '@typescript-eslint/parser': ^5.0.0
-      '@zeroapi/nest': workspace:^1.0.0
-      '@zeroapi/rpc': workspace:^1.0.0
+      '@reduite/zeroapi-nest': workspace:^1.0.0
+      '@reduite/zeroapi-rpc': workspace:^1.0.0
       eslint: ^8.0.1
       eslint-config-prettier: ^8.3.0
       eslint-plugin-prettier: ^4.0.0
@@ -93,8 +93,8 @@ importers:
       '@nestjs/common': 9.3.9_mnr6j2del53muneqly5h4y27ai
       '@nestjs/core': 9.3.9_q6agyr4hwia55oswpsa7zjxcpm
       '@nestjs/platform-express': 9.3.9_77foi4w27ghy47yutmnzv7krjy
-      '@zeroapi/nest': file:packages/nest_di24qm6yue5fntyk7rf62rf474
-      '@zeroapi/rpc': link:../../packages/rpc
+      '@reduite/zeroapi-nest': file:packages/nest_di24qm6yue5fntyk7rf62rf474
+      '@reduite/zeroapi-rpc': link:../../packages/rpc
       fp-ts: 2.13.1
       reflect-metadata: 0.1.13
       rxjs: 7.8.0
@@ -125,7 +125,7 @@ importers:
       vite-plugin-dts: 2.0.0-beta.3_ozmxdt4hek43x4ekzis6wtbvwm
       vite-plugin-externalize-deps: 0.5.0_vite@4.1.4
     dependenciesMeta:
-      '@zeroapi/nest':
+      '@reduite/zeroapi-nest':
         injected: true
 
   packages/nest:
@@ -135,7 +135,7 @@ importers:
       '@nestjs/core': ^9.0.0
       '@nestjs/platform-fastify': ^9.3.9
       '@nestjs/testing': ^9.3.3
-      '@zeroapi/rpc': workspace:^1.0.0
+      '@reduite/zeroapi-rpc': workspace:^1.0.0
       fastify: ^4.13.0
       reflect-metadata: ^0.1.13
       rimraf: ^4.1.2
@@ -147,7 +147,7 @@ importers:
       '@anatine/zod-nestjs': 1.9.2_jhndvqofrwsex2muk5z3wmaumi
       '@nestjs/common': 9.3.9_mnr6j2del53muneqly5h4y27ai
       '@nestjs/core': 9.3.9_jrq2rdgfp2sx67wmylmrqliwxe
-      '@zeroapi/rpc': link:../rpc
+      '@reduite/zeroapi-rpc': link:../rpc
       reflect-metadata: 0.1.13
       rxjs: 7.8.0
       unplugin: 1.1.0
@@ -12884,13 +12884,13 @@ packages:
   file:packages/nest_di24qm6yue5fntyk7rf62rf474:
     resolution: {directory: packages/nest, type: directory}
     id: file:packages/nest
-    name: '@zeroapi/nest'
+    name: '@reduite/zeroapi-nest'
     version: 1.0.0
     dependencies:
       '@anatine/zod-nestjs': 1.9.2_jhndvqofrwsex2muk5z3wmaumi
       '@nestjs/common': 9.3.9_mnr6j2del53muneqly5h4y27ai
       '@nestjs/core': 9.3.9_q6agyr4hwia55oswpsa7zjxcpm
-      '@zeroapi/rpc': link:packages/rpc
+      '@reduite/zeroapi-rpc': link:packages/rpc
       reflect-metadata: 0.1.13
       rxjs: 7.8.0
       unplugin: 1.1.0

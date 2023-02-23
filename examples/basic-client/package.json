@@ -10,7 +10,7 @@
     "@types/node": "^16.18.12",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@zeroapi/rpc": "workspace:^1.0.0",
+    "@reduite/zeroapi-rpc": "workspace:^1.0.0",
     "basic-server": "workspace:^0.0.1",
     "fp-ts": "^2.13.1",
     "react": "^18.2.0",
