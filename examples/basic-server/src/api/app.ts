@@ -6,11 +6,11 @@ import {AppService} from '../service/app';
 
 const controller = createController();
 
-function _hello(this : RequestContext) {
-    const service = this.ref.get(AppService);
+const _hello = ({ref} : RequestContext) => () => {
+    const service = ref.get(AppService);
     const result = service.getHello();
     return E.right(result);
-}
+};
 
 export const hello = controller(_hello);
 

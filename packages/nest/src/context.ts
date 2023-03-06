@@ -19,8 +19,7 @@ export class RequestCommon {
 
 export class RequestContext {
     constructor(
-        public ref : ModuleRef,
-        public req : RequestCommon,
-        public func : (...args : any[]) => any,
+        public readonly ref : ModuleRef,
+        public readonly req : RequestCommon,
     ) {}
 }

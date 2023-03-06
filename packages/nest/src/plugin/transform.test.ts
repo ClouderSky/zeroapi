@@ -9,7 +9,7 @@ const controller = createController('test');
 const _hello = (name : string) => `hello,${name}`;
 
 export const hello = controller(
-    _hello, {route : 'hello', args : z.tuple([z.string()])});
+    () => _hello, {route : 'hello', args : z.tuple([z.string()])});
 
 export default hello;
 

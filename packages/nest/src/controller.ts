@@ -21,6 +21,14 @@ interface ControllerOption<
     query ?: Query;
 }
 
+type SchemaArgs<Args extends z.ZodTypeAny> =
+    Args extends z.ZodTuple ? z.infer<Args> :
+        z.ZodTypeAny extends Args ? [] : [z.infer<Args>];
+
+type ControllerFunction<Args extends any[], R> =
+    (context : RequestContext) => (...args : Args) => R | Promise<R>;
+
+
 const makeUrl = (
     prefix ?: string | string[], route ?: string | string[],
 ) : string => [
@@ -29,16 +37,8 @@ const makeUrl = (
 ].filter((x) : x is string => typeof x === 'string').join('/');
 
 const createBodyDTO = (option ?: ControllerOption<z.ZodTypeAny, any, any>) =>
-    createZodDto(z.object({
-        args : option?.args || z.array(z.any()),
-    }));
+    createZodDto(z.object({args : option?.args || z.array(z.any())}));
 
-type SchemaArgs<Args extends z.ZodTypeAny> =
-    Args extends z.ZodTuple ? z.infer<Args> :
-        z.ZodTypeAny extends Args ? [] : [z.infer<Args>];
-
-type ControllerFunction<Args extends any[], R> =
-    (...args : Args) => R | Promise<R>;
 
 export interface OutputController<A extends any[], R> {
     url : string;
@@ -72,8 +72,8 @@ export const createController = (prefix ?: string | string[]) => <
             @Query() query : Record<string, string>,
         ) {
             const req = new RequestCommon(raw, param, query);
-            const context = new RequestContext(this.ref, req, func);
-            return context.func(...(body.args || []));
+            const context = new RequestContext(this.ref, req);
+            return func(context)(...(body.args || []));
         }
     }
 
