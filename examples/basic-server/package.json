@@ -24,7 +24,7 @@
         "@nestjs/common": "^9.0.0",
         "@nestjs/core": "^9.0.0",
         "@nestjs/platform-express": "^9.0.0",
-        "@reduite/zeroapi-nest": "workspace:^1.0.0",
+        "@reduite/zeroapi-nest": "workspace:^1.0.1",
         "@reduite/zeroapi-rpc": "workspace:^1.0.0",
         "fp-ts": "^2.13.1",
         "reflect-metadata": "^0.1.13",

@@ -4,6 +4,7 @@ import {z} from 'zod';
 import {ModuleRef} from '@nestjs/core';
 import {
     Body, Controller, Param, Post, Query, Req, SetMetadata,
+    UsePipes, ValidationPipe,
 } from '@nestjs/common';
 import {createZodDto} from '@anatine/zod-nestjs';
 import {API_METADATA_TYPE, ApiMetadataType} from './constant';
@@ -59,6 +60,7 @@ export const createController = (prefix ?: string | string[]) => <
     class BodyDTO extends createBodyDTO(option) {}
 
     @Controller({path : prefix})
+    @UsePipes(new ValidationPipe())
     @SetMetadata(API_METADATA_TYPE, ApiMetadataType.CONTROLLER)
     class FunctionController {
         constructor(private ref : ModuleRef) {}

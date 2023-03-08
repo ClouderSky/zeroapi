@@ -1,6 +1,6 @@
 {
     "name": "@reduite/zeroapi-nest",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -23,6 +23,8 @@
         "@nestjs/common": "^9.0.0",
         "@nestjs/core": "^9.0.0",
         "@reduite/zeroapi-rpc": "workspace:^1.0.0",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.0",
         "reflect-metadata": "^0.1.13",
         "rxjs": "^7.2.0",
         "unplugin": "^1.1.0",
